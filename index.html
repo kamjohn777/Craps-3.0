@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Craps 7/11</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div>
+        <h1>Craps 7/11</h1>
+      </div>
+
+      <div class="sub-m-Container">
+        <div class="left-field-wrap">
+            <div id="left-dice-container" class="left-field-wrap">
+                <div class="left dice">
+                    <div class="face one">
+                      <span class="dot center"></span>
+                    </div>
+                    <div class="face two">
+                      <span class="dot top-left"></span>
+                      <span class="dot bottom-right"></span>
+                    </div>
+                    <div class="face three">
+                      <span class="dot top-left"></span>
+                      <span class="dot center"></span>
+                      <span class="dot bottom-right"></span>
+                    </div>
+                    <div class="face four">
+                      <span class="dot top-left"></span>
+                      <span class="dot top-right"></span>
+                      <span class="dot bottom-left"></span>
+                      <span class="dot bottom-right"></span>
+                    </div>
+                    <div class="face five">
+                      <span class="dot top-left"></span>
+                      <span class="dot top-right"></span>
+                      <span class="dot center"></span>
+                      <span class="dot bottom-left"></span>
+                      <span class="dot bottom-right"></span>
+                    </div>
+                    <div class="face six">
+                      <span class="dot top-left"></span>
+                      <span class="dot top-center"></span>
+                      <span class="dot top-right"></span>
+                      <span class="dot bottom-left"></span>
+                      <span class="dot bottom-center"></span>
+                      <span class="dot bottom-right"></span>
+                    </div>
+                  </div>
+    
+                  <!-- Second Dice -->
+                  <div class="left dice">
+                    <div class="face one">
+                      <span class="dot center"></span>
+                    </div>
+                    <div class="face two">
+                      <span class="dot top-left"></span>
+                      <span class="dot bottom-right"></span>
+                    </div>
+                    <div class="face three">
+                      <span class="dot top-left"></span>
+                      <span class="dot center"></span>
+                      <span class="dot bottom-right"></span>
+                    </div>
+                    <div class="face four">
+                      <span class="dot top-left"></span>
+                      <span class="dot top-right"></span>
+                      <span class="dot bottom-left"></span>
+                      <span class="dot bottom-right"></span>
+                    </div>
+                    <div class="face five">
+                      <span class="dot top-left"></span>
+                      <span class="dot top-right"></span>
+                      <span class="dot center"></span>
+                      <span class="dot bottom-left"></span>
+                      <span class="dot bottom-right"></span>
+                    </div>
+                    <div class="face six">
+                      <span class="dot top-left"></span>
+                      <span class="dot top-center"></span>
+                      <span class="dot top-right"></span>
+                      <span class="dot bottom-left"></span>
+                      <span class="dot bottom-center"></span>
+                      <span class="dot bottom-right"></span>
+                    </div>
+                  </div>
+                  <!-- End of second dice -->
+    
+            </div>
+            
+          <div class="buttons">
+            <button id="roll">Roll</button>
+            <button id="reset">Reset</button>
+          </div>
+
+          <div class="result">
+            <h2 id="result"></h2>
+          </div>
+        </div>
+
+        <!-- Right div wrap -->
+        <div class="right-field-wrap">
+          <div class="dice">
+            <img src="./images/dice1.png" alt="dice1" id="dice1" />
+            <img src="./images/dice1.png" alt="dice2" id="dice2" />
+          </div>
+
+          <div class="buttons">
+            <button id="roll">Roll</button>
+            <button id="reset">Reset</button>
+          </div>
+
+          <div class="result">
+            <h2 id="result"></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
