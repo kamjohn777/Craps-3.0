@@ -1,61 +1,4 @@
-::after,
-::before {
-  box-sizing: border-box;
-  border: 0 solid #e5e7eb;
-  --tw-border-spacing-x: 0;
-  --tw-border-spacing-y: 0;
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-pan-x: ;
-  --tw-pan-y: ;
-  --tw-pinch-zoom: ;
-  --tw-scroll-snap-strictness: proximity;
-  --tw-gradient-from-position: ;
-  --tw-gradient-via-position: ;
-  --tw-gradient-to-position: ;
-  --tw-ordinal: ;
-  --tw-slashed-zero: ;
-  --tw-numeric-figure: ;
-  --tw-numeric-spacing: ;
-  --tw-numeric-fraction: ;
-  --tw-ring-inset: ;
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  --tw-blur: ;
-  --tw-brightness: ;
-  --tw-contrast: ;
-  --tw-grayscale: ;
-  --tw-hue-rotate: ;
-  --tw-invert: ;
-  --tw-saturate: ;
-  --tw-sepia: ;
-  --tw-drop-shadow: ;
-  --tw-backdrop-blur: ;
-  --tw-backdrop-brightness: ;
-  --tw-backdrop-contrast: ;
-  --tw-backdrop-grayscale: ;
-  --tw-backdrop-hue-rotate: ;
-  --tw-backdrop-invert: ;
-  --tw-backdrop-opacity: ;
-  --tw-backdrop-saturate: ;
-  --tw-backdrop-sepia: ;
-}
-::after,
-::before {
-  --tw-content: "";
-}
 
-/*  */
 
 
 
@@ -70,7 +13,7 @@ body {
 .main-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   align-items: center;
   height: 700px;
   width: 930px;
@@ -97,7 +40,7 @@ body {
 #left-dice-container {
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-start; */
+  justify-content: space-evenly;
   align-items: center;
   height: 560px;
   width: 448px;
@@ -215,6 +158,10 @@ body {
   right: 10px;
 }
 
+/*  */
+
+
+
 
 
 /* Test for button */
@@ -229,7 +176,7 @@ body {
   
   .link {
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
     font-size: 1rem;
   }
   
@@ -272,46 +219,18 @@ body {
   .text-block .relative {
     position: relative;
   }
-  
-  .bottom-right-btn-span {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 3rem;
-    margin-bottom: -0.25rem;
-    margin-right: -0.25rem;
-    transition: all 0.2s linear;
-    background: #2d3748;
-    border-radius: 0.5rem;
-  }
 
   
-/* 
-
-  .group:hover .group-hover\:-translate-x-0 {
-    --tw-translate-x: -0px;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  } */
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   #roll-button {
     position: relative;
+    display: flex;
     overflow: hidden;
+    /* background: #fff; */
+    width: 110px;
+    align-items: center;
+    justify-content: center;
   }
   
   #roll-button .link {
@@ -338,40 +257,53 @@ body {
     width: 100%;
     height: 100%;
     background: white;
-    transition: transform 0.3s;
+    transition: transform 0.7s;
   }
   
   #roll-button .rotate {
-    /* position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    transform: rotate(-90deg);
-    transition: transform 0.3s; */
     position: absolute;
     top: 0;
     left: 0;
     width: 85px;
     height: 100%;
-    background: black;
+    /* background: black; */
+    background: #2D3737;
     transform: rotate(-90deg);
-    transition: transform 0.3s;
+    transition: transform 0.4s ease-in-out;
   }
 
-  #roll-button::before {
+  /* #roll-button::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
+    background: white;
     background: rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: all 0.3s;
-  }
+  } */
   
-  #roll-button:hover::before {
+  /* #roll-button:hover::before {
     transform: translateX(-100%);
+  } */
+
+    
+  .bottom-right-btn-span {
+    position: absolute;
+    bottom: -2px;
+    right: 38px;
+    width: 53%;
+    height: 3rem;
+    margin-bottom: -0.25rem;
+    margin-right: -0.25rem;
+    transition: all 0.5s linear;
+    background: #2D3737;
+    border-radius: 0.5rem;
+    transform: translateX(100%);
+  }
+
+  #roll-button:hover .bottom-right-btn-span {
+    transform: translateX(0); /* When the button is hovered, move the span back to its original position */
   }
 
 /* end of test for button */
