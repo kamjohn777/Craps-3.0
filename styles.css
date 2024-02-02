@@ -1,211 +1,377 @@
+::after,
+::before {
+  box-sizing: border-box;
+  border: 0 solid #e5e7eb;
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x: ;
+  --tw-pan-y: ;
+  --tw-pinch-zoom: ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position: ;
+  --tw-gradient-via-position: ;
+  --tw-gradient-to-position: ;
+  --tw-ordinal: ;
+  --tw-slashed-zero: ;
+  --tw-numeric-figure: ;
+  --tw-numeric-spacing: ;
+  --tw-numeric-fraction: ;
+  --tw-ring-inset: ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur: ;
+  --tw-brightness: ;
+  --tw-contrast: ;
+  --tw-grayscale: ;
+  --tw-hue-rotate: ;
+  --tw-invert: ;
+  --tw-saturate: ;
+  --tw-sepia: ;
+  --tw-drop-shadow: ;
+  --tw-backdrop-blur: ;
+  --tw-backdrop-brightness: ;
+  --tw-backdrop-contrast: ;
+  --tw-backdrop-grayscale: ;
+  --tw-backdrop-hue-rotate: ;
+  --tw-backdrop-invert: ;
+  --tw-backdrop-opacity: ;
+  --tw-backdrop-saturate: ;
+  --tw-backdrop-sepia: ;
+}
+::after,
+::before {
+  --tw-content: "";
+}
+
+/*  */
+
+
+
+
+
+
 body {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .main-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 700px;
-    width: 930px;
-    background-color: red;
-    border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 700px;
+  width: 930px;
+  background-color: red;
+  border-radius: 20px;
 }
 
 .main-container h1 {
-    color: white;
-    font-size: 50px;
+  color: white;
+  font-size: 50px;
 }
 
 .sub-m-Container {
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: flex-start;
-    align-items: center;
-    height: 560px;
-    width: 897px;
-    background-color: white;
-    border-radius: 20px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: flex-start;
+  align-items: center;
+  height: 560px;
+  width: 897px;
+  background-color: white;
+  border-radius: 20px;
 }
 
-.left-field-wrap {
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: flex-start;
-    align-items: center;
-    height: 560px;
-    width: 448px;
-    background-color: blue;
-    border-radius: 20px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-right: 1px solid black
+#left-dice-container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  align-items: center;
+  height: 560px;
+  width: 448px;
+  background-color: yellow;
+  border-radius: 20px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-right: 1px solid black;
+}
+
+#left-dice-div {
+  display: flex;
+  width: 57%;
+  justify-content: space-around;
 }
 
 .right-field-wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 560px;
-    width: 448px;
-    background-color: green;
-    border-radius: 20px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-left: 1px solid black
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 560px;
+  width: 448px;
+  background-color: green;
+  border-radius: 20px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-left: 1px solid black;
 }
 
-/* Dices css */
-/* .dice {
+.dice {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg) rotateY(45deg);
+}
+
+.face {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  line-height: 70px;
+  text-align: center;
+  font-size: 1.4em;
+}
+
+.one {
+  transform: translateZ(35px);
+}
+
+.six {
+  transform: rotateY(180deg) translateZ(35px);
+}
+
+.three {
+  transform: rotateY(90deg) translateZ(35px);
+}
+
+.four {
+  transform: rotateY(-90deg) translateZ(35px);
+}
+
+.five {
+  transform: rotateX(90deg) translateZ(35px);
+}
+
+.two {
+  transform: rotateX(-90deg) translateZ(35px);
+}
+
+.dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50%;
+}
+
+.top-left {
+  top: 10px;
+  left: 10px;
+}
+
+.top-center {
+  top: 10px;
+  left: 30px;
+}
+
+.top-right {
+  top: 10px;
+  right: 10px;
+}
+
+.center {
+  top: 30px;
+  left: 30px;
+}
+
+.bottom-left {
+  bottom: 10px;
+  left: 10px;
+}
+
+.bottom-center {
+  bottom: 10px;
+  left: 30px;
+}
+
+.bottom-right {
+  bottom: 10px;
+  right: 10px;
+}
+
+
+
+/* Test for button */
+.container {
+    border: 1px solid;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .link {
     position: relative;
-    width: 100px;
-    height: 100px;
-    transform-style: preserve-3d;
-    transform: rotateX(-20deg) rotateY(45deg);
-  } */
-
-  .dice {
+    display: inline-block;
+    font-size: 1rem;
+  }
+  
+  .text-block {
     position: relative;
-    width: 70px;
-    height: 70px;
-    transform-style: preserve-3d;
-    transform: rotateX(-20deg) rotateY(45deg);
+    z-index: 10;
+    display: block;
+    padding: 15px 25px;
+    overflow: hidden;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #2d3748;
+    transition: color 0.3s ease-out;
+    border: 2px solid #2d3748;
+    border-radius: 0.5rem;
   }
   
-  /* .face {
+  .text-block .background {
     position: absolute;
-    width: 100px;
-    height: 100px;
-    background: white;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
-    line-height: 100px;
-    text-align: center;
-    font-size: 2em;
-  } */
-
-  .face {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px 25px;
+    border-radius: 0.5rem;
+    background: #f7fafc;
+  }
+  
+  .text-block .rotate {
     position: absolute;
-    width: 70px;
-    height: 70px;
-    background: white;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
-    line-height: 70px;
-    text-align: center;
-    font-size: 1.4em;
+    left: 0;
+    width: 12rem;
+    height: 12rem;
+    margin-left: -0.5rem;
+    transition: all 0.3s ease;
+    transform-origin: top right;
+    transform: rotate(-90deg) translateX(-100%) translateY(3rem);
+    background: #2d3748;
   }
   
-  .one {
-    transform: translateZ(35px);
+  .text-block .relative {
+    position: relative;
   }
   
-  .six {
-    transform: rotateY(180deg) translateZ(35px);
-  }
-  
-  .three {
-    transform: rotateY(90deg) translateZ(35px);
-  }
-  
-  .four {
-    transform: rotateY(-90deg) translateZ(35px);
-  }
-  
-  .five {
-    transform: rotateX(90deg) translateZ(35px);
-  }
-  
-  .two {
-    transform: rotateX(-90deg) translateZ(35px);
+  .bottom-right-btn-span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 3rem;
+    margin-bottom: -0.25rem;
+    margin-right: -0.25rem;
+    transition: all 0.2s linear;
+    background: #2d3748;
+    border-radius: 0.5rem;
   }
 
-/* dots */
-  /* .dot {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background: black;
-    border-radius: 50%;
-  }
   
-  .top-left {
-    top: 15px;
-    left: 15px;
-  }
-  
-  .top-center {
-    top: 15px;
-    left: 42.5px;
-  }
-  
-  .top-right {
-    top: 15px;
-    right: 15px;
-  }
-  
-  .center {
-    top: 42.5px;
-    left: 42.5px;
-  }
-  
-  .bottom-left {
-    bottom: 15px;
-    left: 15px;
-  }
-  
-  .bottom-center {
-    bottom: 15px;
-    left: 42.5px;
-  }
-  
-  .bottom-right {
-    bottom: 15px;
-    right: 15px;
+/* 
+
+  .group:hover .group-hover\:-translate-x-0 {
+    --tw-translate-x: -0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  #roll-button {
+    position: relative;
+    overflow: hidden;
+  }
   
-  .dot {
+  #roll-button .link {
+    display: block;
+    transition: color 0.3s;
+  }
+  
+  #roll-button .link:hover .text-block {
+    color: white;
+  }
+  
+  #roll-button .link:hover .background {
+    transform: translate(-100%, -100%);
+  }
+  
+  #roll-button .link:hover .rotate {
+    transform: rotate(0deg);
+  }
+  
+  #roll-button .background {
     position: absolute;
-    width: 10px;
-    height: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transition: transform 0.3s;
+  }
+  
+  #roll-button .rotate {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: black;
-    border-radius: 50%;
+    transform: rotate(-90deg);
+    transition: transform 0.3s; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85px;
+    height: 100%;
+    background: black;
+    transform: rotate(-90deg);
+    transition: transform 0.3s;
+  }
+
+  #roll-button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
   }
   
-  .top-left {
-    top: 10px;
-    left: 10px;
+  #roll-button:hover::before {
+    transform: translateX(-100%);
   }
-  
-  .top-center {
-    top: 10px;
-    left: 30px;
-  }
-  
-  .top-right {
-    top: 10px;
-    right: 10px;
-  }
-  
-  .center {
-    top: 30px;
-    left: 30px;
-  }
-  
-  .bottom-left {
-    bottom: 10px;
-    left: 10px;
-  }
-  
-  .bottom-center {
-    bottom: 10px;
-    left: 30px;
-  }
-  
-  .bottom-right {
-    bottom: 10px;
-    right: 10px;
-  }
+
+/* end of test for button */
