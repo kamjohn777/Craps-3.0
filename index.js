@@ -1,51 +1,11 @@
-// document.getElementById("roll-button").addEventListener("click", function () {
-//     // Calculate a random roll for each dice
-//     var roll1 = Math.floor(Math.random() * 6) + 1;
-//     var roll2 = Math.floor(Math.random() * 6) + 1;
-
-//     let total = roll1 + roll2;
-//     document.getElementById("h2_count").innerHTML = "Count: " + total;
-  
-//     // Update the dice to show the new roll
-//     updateDice('dice-container1', roll1);
-//     updateDice('dice-container2', roll2);
-//   });
-  
-//   function updateDice(containerId, roll) {
-//     // Get the dice container element
-//     let container = document.getElementById(containerId);
-  
-//     // Apply the correct transform to the container
-//     switch (roll) {
-//       case 1:
-//         container.style.transform = 'rotateX(0deg) rotateY(0deg)';
-//         break;
-//       case 2:
-//         container.style.transform = 'rotateX(-90deg) rotateY(0deg)';
-//         break;
-//       case 3:
-//         container.style.transform = 'rotateX(0deg) rotateY(90deg)';
-//         break;
-//       case 4:
-//         container.style.transform = 'rotateX(0deg) rotateY(-90deg)';
-//         break;
-//       case 5:
-//         container.style.transform = 'rotateX(90deg) rotateY(0deg)';
-//         break;
-//       case 6:
-//         container.style.transform = 'rotateX(-180deg) rotateY(0deg)';
-//         break;
-//     }
-//   }
-
 
   document.getElementById("roll-button").addEventListener("click", function () {
     // Calculate a random count between 2 and 12
-    var count = Math.floor(Math.random() * 11) + 2;
+    let count = Math.floor(Math.random() * 11) + 2;
   
     // Calculate a random roll for each dice
-    var roll1 = Math.floor(Math.random() * (count - 1)) + 1;
-    var roll2 = count - roll1;
+    let roll1 = Math.floor(Math.random() * (count - 1)) + 1;
+    let roll2 = count - roll1;
   
     // If roll2 is out of dice range, recalculate both rolls
     while (roll2 < 1 || roll2 > 6) {
@@ -55,13 +15,6 @@
   
     document.getElementById("h2_count").innerHTML = "Count: " + count;
   
-    // Update the dice to show the new roll
-    // updateDice('left-dice', roll1);
-    // updateDice('right-dice', roll2);
-
-    // Update the dice to show the new roll
-  updateDice('dice', roll1, 0); // update the first dice
-  updateDice('dice', roll2, 1); // update the second dice
 
   updateDice('dice', count); // update the first dice
   });
@@ -117,5 +70,6 @@
         diceElements[0].style.transform = 'rotateX(176deg) rotateY(4deg)';
         diceElements[1].style.transform = 'rotateX(176deg) rotateY(4deg)';
         break;
+
     }
   }

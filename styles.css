@@ -6,6 +6,7 @@ body {
 }
 
 .main-container {
+    background: linear-gradient(109.6deg, rgb(218, 185, 252) 11.2%, rgb(125, 89, 252) 91.1%);
   display: flex;
   flex-direction: column;
   /* justify-content: flex-start; */
@@ -67,11 +68,12 @@ body {
 }
 
 .dice {
-  position: relative;
+  /* position: relative;
   width: 70px;
   height: 70px;
   transform-style: preserve-3d;
-  transform: rotateX(-20deg) rotateY(45deg);
+  transform: rotateX(-20deg) rotateY(45deg); */
+  transition: transform .5s ease-in-out;
 }
 
 .left-dice {
@@ -239,6 +241,7 @@ body {
     overflow: hidden;
     /* background: #fff; */
     width: 110px;
+    height: 75px;
     align-items: center;
     justify-content: center;
   }
@@ -282,7 +285,7 @@ body {
   }
     
   .bottom-right-btn-span {
-    position: absolute;
+    /* position: absolute;
     bottom: -2px;
     right: 38px;
     width: 53%;
@@ -293,10 +296,23 @@ body {
     background: #2D3737;
     border-radius: 0.5rem;
     transform: translateX(100%);
+    transform: translateX(100%) translateY(30%); */
+    position: absolute;
+    bottom: -2px;
+    right: 38px;
+    width: 84%;
+    height: 3rem;
+    margin-bottom: -0.25rem;
+    margin-right: -0.25rem;
+    transition: all 0.5s linear;
+    background: #2D3737;
+    border-radius: 0.5rem;
+    /* transform: translateX(100%); */
+    transform: translateX(63%) translateY(-7%);
   }
 
   #roll-button:hover .bottom-right-btn-span {
-    transform: translateX(0); /* When the button is hovered, move the span back to its original position */
+    transform: translateX(0%) translateY(-10%);
   }
 
 /* end of test for button */
