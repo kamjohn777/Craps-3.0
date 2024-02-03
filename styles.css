@@ -13,7 +13,7 @@ body {
   align-items: center;
   height: 700px;
   width: 930px;
-  background-color: red;
+  /* background-color: red; */
   border-radius: 20px;
 }
 
@@ -60,7 +60,8 @@ body {
   align-items: center;
   height: 560px;
   width: 448px;
-  background-color: green;
+  /* background-color: green; */
+  background-color: violet;
   border-radius: 20px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
@@ -281,7 +282,7 @@ body {
     height: 100%;
     background: #2D3737;
     transform: rotate(-90deg);
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.25s ease-in-out;
   }
     
   .bottom-right-btn-span {
@@ -298,22 +299,29 @@ body {
     transform: translateX(100%);
     transform: translateX(100%) translateY(30%); */
     position: absolute;
-    bottom: -2px;
-    right: 38px;
-    width: 84%;
-    height: 3rem;
+    /* bottom: -2px;
+    right: 38px; */
+    bottom: 0px;
+    right: -2px;
+    width: 98%;
+    height: 3.2rem;
     margin-bottom: -0.25rem;
     margin-right: -0.25rem;
     transition: all 0.5s linear;
     background: #2D3737;
     border-radius: 0.5rem;
     /* transform: translateX(100%); */
-    transform: translateX(63%) translateY(-7%);
+    /* transform: translateX(63%) translateY(-7%); */
   }
 
-  #roll-button:hover .bottom-right-btn-span {
-    transform: translateX(0%) translateY(-10%);
-  }
+
+#roll-button .bottom-right-btn-span {
+  transition: transform 0.17s linear;
+}
+
+#roll-button:hover .bottom-right-btn-span {
+  transform: translateX(-10%) translateY(-10%);
+}
 
 /* end of test for button */
 
