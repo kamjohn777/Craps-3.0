@@ -1,5 +1,6 @@
 
-  document.getElementById("roll-button").addEventListener("click", function () {
+// Added an event listener to the roll button so it calls a function when clicked
+document.getElementById("roll-button").addEventListener("click", function () {
     // Calculate a random count between 2 and 12
     let count = Math.floor(Math.random() * 11) + 2;
   
@@ -19,7 +20,7 @@
   updateDice('dice', count); // update the first dice
   });
   
-
+// This function updates the dice based on the count so when the count changes, the dice will change
   function updateDice(diceClass, count) {
     // Get the dice elements
     let diceElements = document.getElementsByClassName(diceClass);
@@ -73,3 +74,6 @@
 
     }
   }
+
+
+ 

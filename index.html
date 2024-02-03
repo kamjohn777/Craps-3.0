@@ -4,9 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
     <title>Craps 7/11</title>
   </head>
   <body>
+    <!-- This is the modal Section -->
+    <div class="modal" tabindex="-1" id="choiceModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Choose High or Low</h5>
+          </div>
+          <div class="modal-body">
+            <p>Player 1, do you choose high or low?</p>
+            <input type="text" id="player1Choice" />
+            <p>Player 2, do you choose high or low?</p>
+            <input type="text" id="player2Choice" />
+            <p id="message"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="rollDiceButton">
+              Roll Dice
+            </button>
+            <button type="button" class="btn btn-primary" id="startGameButton">
+              Start Game
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- This is the modal section -->
+
     <div class="main-container">
       <div>
         <h1>Craps 7/11</h1>
@@ -14,13 +43,9 @@
 
       <div class="sub-m-Container">
         <div class="left-field-wrap">
-
-
           <div id="left-dice-container" class="left-field-wrap">
-
-            
             <div>
-                <h2>BankRoll: 50</h2>
+              <h2>BankRoll: 50</h2>
             </div>
 
             <div class="count-div">
@@ -31,7 +56,7 @@
             </div>
 
             <div id="left-dice-div">
-                <!-- Divs for the two dice under this comment -->
+              <!-- Divs for the two dice under this comment -->
               <div id="dice-container1">
                 <div id="dice-one" class="left-dice dice">
                   <div class="face one">
@@ -72,8 +97,7 @@
 
               <!-- Second Dice -->
               <div id="dice-container2">
-              <div id="dice-two" class="right-dice dice">
-                
+                <div id="dice-two" class="right-dice dice">
                   <div class="face one">
                     <span class="dot center"></span>
                   </div>
@@ -112,8 +136,6 @@
               <!-- End of second dice -->
             </div>
 
-        
-
             <!-- place for test btn -->
             <div id="roll-button">
               <div class="link">
@@ -124,19 +146,11 @@
                   <!-- <span class="bottom-right-btn-span"></span> -->
                 </span>
                 <span class="bottom-right-btn-span"></span>
-            </div>
+              </div>
             </div>
             <!-- end of place for test btn -->
           </div>
         </div>
-
-
-
-
-
-
-
-        
 
         <!-- Right div wrap -->
         <div class="right-field-wrap">
@@ -156,6 +170,8 @@
         </div>
       </div>
     </div>
-    <script src="./index.js"></script>
+
+    <script src="./JavaScript/index.js"></script>
+    <script src="./JavaScript/high_low.js"></script>
   </body>
 </html>
