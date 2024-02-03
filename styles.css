@@ -1,10 +1,5 @@
 
 
-
-
-
-
-
 body {
   display: flex;
   justify-content: center;
@@ -72,6 +67,22 @@ body {
 }
 
 .dice {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg) rotateY(45deg);
+}
+
+.left-dice {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg) rotateY(45deg);
+}
+
+.right-dice {
   position: relative;
   width: 70px;
   height: 70px;
@@ -176,7 +187,6 @@ body {
   
   .link {
     position: relative;
-    /* display: inline-block; */
     font-size: 1rem;
   }
   
@@ -266,27 +276,10 @@ body {
     left: 0;
     width: 85px;
     height: 100%;
-    /* background: black; */
     background: #2D3737;
     transform: rotate(-90deg);
     transition: transform 0.4s ease-in-out;
   }
-
-  /* #roll-button::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: white;
-    background: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s;
-  } */
-  
-  /* #roll-button:hover::before {
-    transform: translateX(-100%);
-  } */
-
     
   .bottom-right-btn-span {
     position: absolute;
@@ -307,3 +300,12 @@ body {
   }
 
 /* end of test for button */
+
+
+
+
+/* roll trst */
+/* Hide all faces initially */
+
+
+  
