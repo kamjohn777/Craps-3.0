@@ -2,8 +2,7 @@ let currentPlayer = 1; // Start with player 1
 let pointNumber = null; // This will hold the point number if a point is established
 
 // Get the status elements
-let player1Status = document.getElementById("player1Status");
-let player2Status = document.getElementById("player2Status");
+
 let statusElm = document.getElementById("status");
 
 // Added an event listener to the roll button so it calls a function when clicked
@@ -22,10 +21,22 @@ document.getElementById("roll-button").addEventListener("click", function () {
       roll2 = count - roll1;
     }
   
-    document.getElementById("h2_count").innerHTML = "Count: " + count;
+    // document.getElementById("h2_count").innerHTML = "Count: " + count;
   
 
-  updateDice('dice', count); // update the first dice
+//   updateDice('dice', count); // update the first dice
+
+  if (currentPlayer === 1) {
+    updateDice('dice', count);
+    document.getElementById("h2_count").innerHTML = "Count: " + count;
+  } else if (currentPlayer === 2){
+    updateDice('dice-R', count);
+    document.getElementById("h2_count-R").innerHTML = "Count: " + count;
+  }
+
+// okay in the broweser when its player 2 turn the dice in both left and right div move but only the second dice in the 
+
+
 
 //   logic for the game and the point number
   if (pointNumber === null) {
@@ -55,7 +66,7 @@ document.getElementById("roll-button").addEventListener("click", function () {
   }
 
   // Update the status elements based on the game state
-
+  updateDice('dice', count); // update the first dice
   });
 
   function switchPlayer() {
@@ -65,6 +76,7 @@ document.getElementById("roll-button").addEventListener("click", function () {
   
 // This function updates the dice based on the count so when the count changes, the dice will change
   function updateDice(diceClass, count) {
+    if ((diceClass === 'dice' && currentPlayer === 1) || (diceClass === 'dice-R' && currentPlayer === 2)) {
     // Get the dice elements
     let diceElements = document.getElementsByClassName(diceClass);
   
@@ -73,10 +85,16 @@ document.getElementById("roll-button").addEventListener("click", function () {
       case 2:
         diceElements[0].style.transform = 'rotateX(0deg) rotateY(0deg)';
         diceElements[1].style.transform = 'rotateX(0deg) rotateY(0deg)';
+
+        // diceElements[2].style.transform = 'rotateX(0deg) rotateY(0deg)';
+        // diceElements[3].style.transform = 'rotateX(0deg) rotateY(0deg)';
         break;
       case 3:
         diceElements[0].style.transform = 'rotateX(0deg) rotateY(0deg)';
         diceElements[1].style.transform = 'rotateX(85deg) rotateY(1deg)';
+
+        // diceElements[2].style.transform = 'rotateX(0deg) rotateY(0deg)';
+        // diceElements[3].style.transform = 'rotateX(85deg) rotateY(1deg)';
         break;
       case 4:
         diceElements[0].style.transform = 'rotateX(85deg) rotateY(1deg)';
@@ -116,6 +134,7 @@ document.getElementById("roll-button").addEventListener("click", function () {
         break;
 
     }
+}
   }
 
 

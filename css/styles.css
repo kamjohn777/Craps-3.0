@@ -264,7 +264,9 @@ body {
   
   
     #roll-button {
-      position: relative;
+      position: absolute;
+      left: 46%;
+      bottom: 20%;
       display: flex;
       overflow: hidden;
       /* background: #fff; */

@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/modal.css" />
     <title>Craps 7/11</title>
@@ -47,11 +46,6 @@
  <div class="player-status">
     
     <h2 id="status">Status:</h2>
-<!-- 
-      <h2>Player 1:</h2>
-      <h2 id="player1Status">High</h2>
-      <h2>Player 2: </h2>
-      <h2 id="player2Status">Low</h2> -->
       </div>
     <!-- end of player status text field  -->
 
@@ -103,7 +97,7 @@
                     <span class="dot bottom-left"></span>
                     <span class="dot bottom-right"></span>
                   </div>
-                  
+
                   <div class="face six">
                     <span class="dot top-left"></span>
                     <span class="dot top-center"></span>
@@ -155,22 +149,22 @@
               </div>
               <!-- End of second dice -->
             </div>
-
-            <!-- place for test btn -->
-            <div id="roll-button">
-              <div class="link">
-                <span class="text-block">
-                  <span class="background"></span>
-                  <span class="rotate"></span>
-                  <span class="relative">tton</span>
-                  <!-- <span class="bottom-right-btn-span"></span> -->
-                </span>
-                <span class="bottom-right-btn-span"></span>
-              </div>
-            </div>
-            <!-- end of place for test btn -->
           </div>
         </div>
+
+          <!-- place for test btn -->
+          <div id="roll-button">
+            <div class="link">
+              <span class="text-block">
+                <span class="background"></span>
+                <span class="rotate"></span>
+                <span class="relative">tton</span>
+                <!-- <span class="bottom-right-btn-span"></span> -->
+              </span>
+              <span class="bottom-right-btn-span"></span>
+            </div>
+          </div>
+          <!-- end of place for test btn -->
 
         <!-- Right div wrap -->
         <!-- <div class="sub-m-Container"> -->
@@ -181,7 +175,7 @@
                 </div>
     
                 <div class="count-div">
-                  <h2 id="h2_count">
+                  <h2 id="h2_count-R">
                     <!-- This will be dynamic and update in JavaScript -->
                     Count: 0
                   </h2>
@@ -190,7 +184,7 @@
                 <div id="right-dice-div">
                   <!-- Divs for the two dice under this comment -->
                   <div id="dice-container1">
-                    <div id="dice-one" class="left-dice dice">
+                    <div id="dice-one" class="left-dice dice-R">
                       <div class="face one">
                         <span class="dot center"></span>
                       </div>
@@ -229,7 +223,7 @@
     
                   <!-- Second Dice in right field-->
                   <div id="dice-container2">
-                    <div id="dice-two" class="right-dice dice">
+                    <div id="dice-two" class="right-dice dice-R">
                       <div class="face one">
                         <span class="dot center"></span>
                       </div>
@@ -267,20 +261,6 @@
                   </div>
                   <!-- End of second dice in right field-->
                 </div>
-
-                  <!-- place for test btn -->
-            <div id="roll-button">
-                <div class="link">
-                  <span class="text-block">
-                    <span class="background"></span>
-                    <span class="rotate"></span>
-                    <span class="relative">tton</span>
-                    <!-- <span class="bottom-right-btn-span"></span> -->
-                  </span>
-                  <span class="bottom-right-btn-span"></span>
-                </div>
-              </div>
-              <!-- end of place for test btn -->
       </div>
     
     <script src="./JavaScript/index.js"></script>
