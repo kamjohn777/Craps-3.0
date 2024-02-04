@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css" />
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/modal.css" />
     <title>Craps 7/11</title>
@@ -37,46 +37,65 @@
     <!-- This is the modal section -->
 
     <div class="main-container">
+        <!-- This is the title inside the main container -->
       <div>
         <h1>Craps 7/11</h1>
       </div>
+        <!-- End of title -->
 
+            <!-- player status text field for turns and wins loses-->
+ <div class="player-status">
+    
+    <h2 id="status">Status:</h2>
+<!-- 
+      <h2>Player 1:</h2>
+      <h2 id="player1Status">High</h2>
+      <h2>Player 2: </h2>
+      <h2 id="player2Status">Low</h2> -->
+      </div>
+    <!-- end of player status text field  -->
+
+        <!-- This is the start of the left container -->
       <div class="sub-m-Container">
         <div class="left-field-wrap">
-          <div id="left-dice-container" class="left-field-wrap">
+                    <div id="left-dice-container" class="left-field-wrap">
             <div>
               <h2>BankRoll: 50</h2>
             </div>
 
-            <div class="count-div">
+                          <div class="count-div">
               <h2 id="h2_count">
                 <!-- This will be dynamic and update in JavaScript -->
                 Count: 0
               </h2>
             </div>
 
-            <div id="left-dice-div">
+                              <div id="left-dice-div">
               <!-- Divs for the two dice under this comment -->
               <div id="dice-container1">
                 <div id="dice-one" class="left-dice dice">
                   <div class="face one">
                     <span class="dot center"></span>
                   </div>
+
                   <div class="face two">
                     <span class="dot top-left"></span>
                     <span class="dot bottom-right"></span>
                   </div>
+
                   <div class="face three">
                     <span class="dot top-left"></span>
                     <span class="dot center"></span>
                     <span class="dot bottom-right"></span>
                   </div>
+
                   <div class="face four">
                     <span class="dot top-left"></span>
                     <span class="dot top-right"></span>
                     <span class="dot bottom-left"></span>
                     <span class="dot bottom-right"></span>
                   </div>
+
                   <div class="face five">
                     <span class="dot top-left"></span>
                     <span class="dot top-right"></span>
@@ -84,6 +103,7 @@
                     <span class="dot bottom-left"></span>
                     <span class="dot bottom-right"></span>
                   </div>
+                  
                   <div class="face six">
                     <span class="dot top-left"></span>
                     <span class="dot top-center"></span>
@@ -153,50 +173,9 @@
         </div>
 
         <!-- Right div wrap -->
-        <div class="right-field-wrap">
-          <div class="dice">
-            <!-- <img src="./images/dice1.png" alt="dice1" id="dice1" />
-            <img src="./images/dice1.png" alt="dice2" id="dice2" /> -->
-          </div>
-
-          <div class="buttons">
-            <button id="roll">Roll</button>
-            <button id="reset">Reset</button>
-          </div>
-
-          <div class="result">
-            <h2 id="result"></h2>
-          </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <div class="sub-m-Container">
-            <div class="left-field-wrap">
-              <div id="left-dice-container" class="left-field-wrap">
+        <!-- <div class="sub-m-Container"> -->
+            <div class="right-field-wrap">
+              <div id="right-dice-container" class="right-field-wrap">
                 <div>
                   <h2>BankRoll: 50</h2>
                 </div>
@@ -248,7 +227,7 @@
                     </div>
                   </div>
     
-                  <!-- Second Dice -->
+                  <!-- Second Dice in right field-->
                   <div id="dice-container2">
                     <div id="dice-two" class="right-dice dice">
                       <div class="face one">
@@ -286,12 +265,27 @@
                       </div>
                     </div>
                   </div>
-                  <!-- End of second dice -->
+                  <!-- End of second dice in right field-->
                 </div>
-      </div>
-    </div>
 
+                  <!-- place for test btn -->
+            <div id="roll-button">
+                <div class="link">
+                  <span class="text-block">
+                    <span class="background"></span>
+                    <span class="rotate"></span>
+                    <span class="relative">tton</span>
+                    <!-- <span class="bottom-right-btn-span"></span> -->
+                  </span>
+                  <span class="bottom-right-btn-span"></span>
+                </div>
+              </div>
+              <!-- end of place for test btn -->
+      </div>
+    
     <script src="./JavaScript/index.js"></script>
     <script src="./JavaScript/high_low.js"></script>
+    <script src="./JavaScript/gameLogic.js"></script>
+
   </body>
 </html>

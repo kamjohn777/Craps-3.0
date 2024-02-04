@@ -1,3 +1,10 @@
+let currentPlayer = 1; // Start with player 1
+let pointNumber = null; // This will hold the point number if a point is established
+
+// Get the status elements
+let player1Status = document.getElementById("player1Status");
+let player2Status = document.getElementById("player2Status");
+let statusElm = document.getElementById("status");
 
 // Added an event listener to the roll button so it calls a function when clicked
 document.getElementById("roll-button").addEventListener("click", function () {
@@ -6,6 +13,7 @@ document.getElementById("roll-button").addEventListener("click", function () {
   
     // Calculate a random roll for each dice
     let roll1 = Math.floor(Math.random() * (count - 1)) + 1;
+    // Calculate the second roll based on the first roll
     let roll2 = count - roll1;
   
     // If roll2 is out of dice range, recalculate both rolls
@@ -18,7 +26,42 @@ document.getElementById("roll-button").addEventListener("click", function () {
   
 
   updateDice('dice', count); // update the first dice
+
+//   logic for the game and the point number
+  if (pointNumber === null) {
+    if (count === 7 || count === 11) {
+      console.log(`Player ${currentPlayer} wins with a first roll of ${count}!`);
+      statusElm.textContent = `Player ${currentPlayer} wins with a first roll of ${count}!`;
+    } else if (count === 2 || count === 3 || count === 12) {
+      console.log(`Player ${currentPlayer} loses with a first roll of ${count}.`);
+        statusElm.textContent = `Player ${currentPlayer} loses with a first roll of ${count}.`;
+      switchPlayer();
+    } else {
+      pointNumber = count;
+      console.log(`Player ${currentPlayer}'s point number is ${pointNumber}.`);
+        statusElm.textContent = `Player ${currentPlayer}'s point number is ${pointNumber}.`;
+    }
+  } else {
+    if (count === pointNumber) {
+      console.log(`Player ${currentPlayer} wins by rolling the point number ${pointNumber} again!`);
+        statusElm.textContent = `Player ${currentPlayer} wins by rolling the point number ${pointNumber} again!`;
+      pointNumber = null;
+    } else if (count === 7) {
+      console.log(`Player ${currentPlayer} loses by rolling a 7.`);
+        statusElm.textContent = `Player ${currentPlayer} loses by rolling a 7.`;
+      pointNumber = null;
+      switchPlayer();
+    }
+  }
+
+  // Update the status elements based on the game state
+
   });
+
+  function switchPlayer() {
+    currentPlayer = currentPlayer === 1 ? 2 : 1;
+    console.log(`It's now Player ${currentPlayer}'s turn.`);
+  }
   
 // This function updates the dice based on the count so when the count changes, the dice will change
   function updateDice(diceClass, count) {
@@ -74,6 +117,8 @@ document.getElementById("roll-button").addEventListener("click", function () {
 
     }
   }
+
+
 
 
  
