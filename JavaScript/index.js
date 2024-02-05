@@ -2,8 +2,12 @@ let currentPlayer = 1; // Start with player 1
 let pointNumber = null; // This will hold the point number if a point is established
 let bankroll1 = 50;
 let bankroll2 = 50;
-// Get the status elements
 
+// elements for active player
+let playerField1 = document.querySelector(".left-field-wrap");
+let playerField2 = document.querySelector(".right-field-wrap");
+
+// Get the status elements
 let statusElm = document.getElementById("status");
 let bankrollElm1 = document.getElementById("BankRoll-h2"); // Assuming you have a similar element for player 2
 let bankrollElm2 = document.getElementById("BankRoll-h2-R"); // Add this to your HTML
@@ -104,7 +108,26 @@ bankrollElm2.textContent = `Bankroll: $${bankroll2}`;
   function switchPlayer() {
     currentPlayer = currentPlayer === 1 ? 2 : 1;
     console.log(`It's now Player ${currentPlayer}'s turn.`);
+    updatePlayerFields();
   }
+
+//   function for active fields
+function updatePlayerFields() {
+    if (currentPlayer === 1) {
+        playerField1.classList.add("active-player");
+        playerField1.classList.remove("inactive-player");
+        playerField2.classList.add("inactive-player");
+        playerField2.classList.remove("active-player");
+    } else {
+        playerField2.classList.add("active-player");
+        playerField2.classList.remove("inactive-player");
+        playerField1.classList.add("inactive-player");
+        playerField1.classList.remove("active-player");
+    }
+}
+
+updatePlayerFields();
+// end of function for active fields
   
 // This function updates the dice based on the count so when the count changes, the dice will change
   function updateDice(diceClass, count) {
