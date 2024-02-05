@@ -38,6 +38,23 @@ body {
     background-color: white;
     border-radius: 20px;
   }
+
+  .left-bankroll, .right-bankroll {
+   display: flex;
+   width: 100%;
+   justify-content: space-around;
+  }
+
+  .left-bankroll img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .right-bankroll img {
+    width: 50px;
+    height: 50px;
+  }
   
   #left-dice-container {
     display: flex;
@@ -218,6 +235,7 @@ body {
       position: relative;
       font-size: 1rem;
       background: #f7fafc;
+      border-radius: 10px;
     }
     
     .text-block {
@@ -259,9 +277,6 @@ body {
     .text-block .relative {
       position: relative;
     }
-  
-    
-  
   
     #roll-button {
       position: absolute;
@@ -307,7 +322,7 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      width: 85px;
+      width: 92px;
       height: 100%;
       background: #2D3737;
       transform: rotate(-90deg);

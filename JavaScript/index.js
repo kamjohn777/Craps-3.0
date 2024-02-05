@@ -1,9 +1,12 @@
 let currentPlayer = 1; // Start with player 1
 let pointNumber = null; // This will hold the point number if a point is established
-
+let bankroll1 = 50;
+let bankroll2 = 50;
 // Get the status elements
 
 let statusElm = document.getElementById("status");
+let bankrollElm1 = document.getElementById("BankRoll-h2"); // Assuming you have a similar element for player 2
+let bankrollElm2 = document.getElementById("BankRoll-h2-R"); // Add this to your HTML
 
 // Added an event listener to the roll button so it calls a function when clicked
 document.getElementById("roll-button").addEventListener("click", function () {
@@ -21,10 +24,9 @@ document.getElementById("roll-button").addEventListener("click", function () {
       roll2 = count - roll1;
     }
   
-    // document.getElementById("h2_count").innerHTML = "Count: " + count;
-  
 
-//   updateDice('dice', count); // update the first dice
+
+
 
   if (currentPlayer === 1) {
     updateDice('dice', count);
@@ -34,7 +36,6 @@ document.getElementById("roll-button").addEventListener("click", function () {
     document.getElementById("h2_count-R").innerHTML = "Count: " + count;
   }
 
-// okay in the broweser when its player 2 turn the dice in both left and right div move but only the second dice in the 
 
 
 
@@ -43,9 +44,25 @@ document.getElementById("roll-button").addEventListener("click", function () {
     if (count === 7 || count === 11) {
       console.log(`Player ${currentPlayer} wins with a first roll of ${count}!`);
       statusElm.textContent = `Player ${currentPlayer} wins with a first roll of ${count}!`;
+       // Update bankrolls
+    if (currentPlayer === 1) {
+        bankroll1 += 5;
+        bankroll2 -= 5;
+    } else {
+        bankroll1 += 5;
+        bankroll2 -= 5;
+    }
     } else if (count === 2 || count === 3 || count === 12) {
       console.log(`Player ${currentPlayer} loses with a first roll of ${count}.`);
         statusElm.textContent = `Player ${currentPlayer} loses with a first roll of ${count}.`;
+         // Update bankrolls
+    if (currentPlayer === 1) {
+        bankroll1 -= 5;
+        bankroll2 += 5;
+    } else {
+        bankroll1 += 5;
+        bankroll2 -= 5;
+    }
       switchPlayer();
     } else {
       pointNumber = count;
@@ -66,7 +83,7 @@ document.getElementById("roll-button").addEventListener("click", function () {
   }
 
   // Update the status elements based on the game state
-  updateDice('dice', count); // update the first dice
+//   updateDice('dice', count); // update the first dice
   });
 
   function switchPlayer() {
