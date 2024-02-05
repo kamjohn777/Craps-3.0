@@ -25,7 +25,8 @@ body {
 
   .player-status {
     position: absolute;
-    top: 15%;
+    /* top: 15%; */
+    top: 41%;
 }
   
   .sub-m-Container {
@@ -289,6 +290,7 @@ body {
       height: 75px;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
     }
     
     #roll-button .link {

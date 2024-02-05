@@ -44,25 +44,23 @@ document.getElementById("roll-button").addEventListener("click", function () {
     if (count === 7 || count === 11) {
       console.log(`Player ${currentPlayer} wins with a first roll of ${count}!`);
       statusElm.textContent = `Player ${currentPlayer} wins with a first roll of ${count}!`;
-       // Update bankrolls
-    if (currentPlayer === 1) {
+      if (currentPlayer === 1){
         bankroll1 += 5;
-        bankroll2 -= 5;
-    } else {
-        bankroll1 += 5;
-        bankroll2 -= 5;
+        bankroll2 -= 5; // Subtract 5 from player 2's bankroll
+    } else if (currentPlayer === 2){
+        bankroll2 += 5;
+        bankroll1 -= 5; // Subtract 5 from player 1's bankroll
     }
     } else if (count === 2 || count === 3 || count === 12) {
       console.log(`Player ${currentPlayer} loses with a first roll of ${count}.`);
         statusElm.textContent = `Player ${currentPlayer} loses with a first roll of ${count}.`;
-         // Update bankrolls
-    if (currentPlayer === 1) {
-        bankroll1 -= 5;
-        bankroll2 += 5;
-    } else {
-        bankroll1 += 5;
-        bankroll2 -= 5;
-    }
+        if (currentPlayer === 1){ 
+            bankroll1 -= 5;
+            bankroll2 += 5; // Add 5 to player 2's bankroll
+        } else if (currentPlayer === 2){
+            bankroll2 -= 5;
+            bankroll1 += 5; // Add 5 to player 1's bankroll
+        }
       switchPlayer();
     } else {
       pointNumber = count;
@@ -73,14 +71,31 @@ document.getElementById("roll-button").addEventListener("click", function () {
     if (count === pointNumber) {
       console.log(`Player ${currentPlayer} wins by rolling the point number ${pointNumber} again!`);
         statusElm.textContent = `Player ${currentPlayer} wins by rolling the point number ${pointNumber} again!`;
+        if (currentPlayer === 1){
+            bankroll1 += 5;
+            bankroll2 -= 5; // Subtract 5 from player 2's bankroll
+        } else if (currentPlayer === 2){
+            bankroll2 += 5;
+            bankroll1 -= 5; // Subtract 5 from player 1's bankroll
+        }
       pointNumber = null;
     } else if (count === 7) {
       console.log(`Player ${currentPlayer} loses by rolling a 7.`);
         statusElm.textContent = `Player ${currentPlayer} loses by rolling a 7.`;
+        if (currentPlayer === 1){ 
+            bankroll1 -= 5;
+            bankroll2 += 5; // Add 5 to player 2's bankroll
+        } else if (currentPlayer === 2){
+            bankroll2 -= 5;
+            bankroll1 += 5; // Add 5 to player 1's bankroll
+        }
       pointNumber = null;
       switchPlayer();
     }
   }
+
+  bankrollElm1.textContent = `Bankroll: $${bankroll1}`;
+bankrollElm2.textContent = `Bankroll: $${bankroll2}`;
 
   // Update the status elements based on the game state
 //   updateDice('dice', count); // update the first dice
